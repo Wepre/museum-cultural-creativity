@@ -1,11 +1,11 @@
 <form bindsubmit="onSubmit">
   <view class="padding">
-  <!-- 名字 -->
+
   <view class="cu-form-group ">
     <view class="title"><text class="text-l">{{res.name}}</text></view>
     <text class="cuIcon-money text-red">¥{{res.price}}</text>
   </view>
-  <!-- 人数 -->
+
   <view class="cu-form-group margin-top">
     <view class="title"><text class="text-l">数量</text></view>
     <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">

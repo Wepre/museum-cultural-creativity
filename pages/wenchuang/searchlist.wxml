@@ -1,31 +1,5 @@
-<!-- 滚动图片 -->
-<swiper class="screen-swiper margin-lr-sm margin-top-xs {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
-    <swiper-item wx:for="{{swiperList}}" wx:key="item">
-      <image src="{{item.url}}" class="radius" mode="aspectFill" style="height: 340rpx;"></image>
-    </swiper-item>
-  </swiper>
-  <!-- 常用功能 -->
-  <view class="cu-list grid col-4 no-border text-black margin-top-xs">
-    <view class="cu-item" wx:for="{{iconList}}" wx:key="idx" bindtap="{{item.bindtap}}">
-      <view class="cuIcon-{{item.icon}} text-{{item.color}} text-shadow" style="font-size: 56rpx;">
-        <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
-          <block wx:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
-        </view>
-      </view>
-      <text>{{item.name}}</text>
-    </view>
-  </view>
-
-  <scroll-view scroll-x class="bg-white nav margin-bottom">
-    <view class="flex text-center">
-      <view class="cu-item flex-sub {{index==TabCur?'text-blue cur text-bold':''}}" wx:for="{{tabList}}" wx:key="item" bindtap="tabSelect" data-id="{{item.id}}">
-        {{item.name}}
-      </view>
-    </view>
-  </scroll-view>
-
-<view class="grid col-2 margin-bottom ">
-	<view wx:for="{{goods}}" bindtap="togoodsdetail" data-index="{{item._id}}" wx:if="{{item.type==selectname}}" class="cu-card case padding-right ">
+<view class="grid col-2 margin-bottom padding ">
+	<view wx:for="{{goods}}" bindtap="togoodsdetail" data-index="{{item._id}}"  class="cu-card case padding-right ">
 		<view class="cu-item shadow">
 			<view class="image" bindtap="todetail" data-index="{{item._id}}">
 				<image src="{{item.images[0]}}" style="height: 200rpx;"></image>
