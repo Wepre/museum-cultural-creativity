@@ -5,7 +5,7 @@ Page({
     goods: [],
 
     allorder: []
-
+ 
   },
   cancle(e) {
     var id = e.currentTarget.dataset.id
