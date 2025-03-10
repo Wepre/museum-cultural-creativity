@@ -5,6 +5,7 @@
         <view class="padding-sm flex flex-wrap">
           <view wx:if="{{item.status!='已完成'}}" slot="footer">
             <van-button size="mini" bind:tap="confirm" data-id="{{item._id}}">确认收货</van-button>
+            <van-button size="mini" bind:tap="cancle" data-id="{{item._id}}">取消订单</van-button>
           </view>
 
         </view>
@@ -17,6 +18,7 @@
         <view class="padding-sm flex flex-wrap">
           <view wx:if="{{item.status!='已完成'}}" slot="footer">
             <van-button size="mini" bind:tap="confirm" data-id="{{item._id}}">确认收货</van-button>
+            <van-button size="mini" bind:tap="cancle" data-id="{{item._id}}">取消订单</van-button>
           </view>
 
         </view>

@@ -7,11 +7,35 @@ Page({
     allorder: []
 
   },
+  cancle(e) {
+    var id = e.currentTarget.dataset.id
+    wx.showModal({
+      title: '是否要取消订单？',
+      content: '',
+      complete: (res) => {
+        if (res.cancel) {
+
+        }
+
+        if (res.confirm) {
+          db.collection('orderList').doc(id).remove().then(res => {
+            wx.showToast({
+              title: '取消成功',
+            })
+            this.onLoad()
+
+          })
+
+        }
+      }
+    })
+
+  },
   confirm(e) {
     var id = e.currentTarget.dataset.id
     db.collection('orderList').doc(id).update({
       data: {
-        status:'已完成'
+        status: '已完成'
       }
     }).then(res => {
       console.log(res)

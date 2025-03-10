@@ -3,11 +3,39 @@ const _ = db.command;
 Page({
   data: {
     goods: [],
+    show: false,
+    actions: [
+      {
+        name: '微信支付',
+      },
+      {
+        name: '支付宝',
+      },
+      
+    ],
     res: [],
     picker: ['1', '2', '3', '4', '5'],
     index: '0',
 
     address: ''
+  },
+  onDisplay() {
+    if (this.data.address == '') {
+      wx.showToast({
+        title: '请输入地址',
+        icon: 'none'
+      })
+      return
+    }
+    this.setData({ show: true });
+  },
+  onClose() {
+    this.setData({ show: false });
+  },
+
+  onSelect(event) {
+    console.log(event.detail);
+    this.onSubmit()
   },
   PickerChange(e) {
     console.log(e);
@@ -57,6 +85,7 @@ Page({
     })
   },
   // 支付操作
+
   onSubmit(e) {
     console.log(e)
     wx.showLoading({

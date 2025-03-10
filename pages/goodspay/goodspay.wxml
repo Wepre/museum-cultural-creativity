@@ -37,5 +37,11 @@
     <input bindinput="addressinput" type="text" name='address' placeholder="请输入地址"/>
   </view>
 </view>
-<van-submit-bar price="{{ res.price*picker[index]*100 }}" button-text="支付" form-type="submit" bindtap="onSubmit"/>
+<van-submit-bar price="{{ res.price*picker[index]*100 }}" button-text="支付" form-type="submit" bindtap="onDisplay"/>
 </form>
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  bind:close="onClose"
+  bind:select="onSelect"
+/>
