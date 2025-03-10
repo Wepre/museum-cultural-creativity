@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="left">
+    <!-- 左侧可以上下滑动的区域 -->
+    <scroll-view scroll-y="true" class="scroll-view">
+      <!-- 左侧内容 -->
+      
+    </scroll-view>
+  </view>
+  <view class="right">
+    <!-- 右侧不受影响的区域 -->
+    <!-- 右侧内容 -->ssss
+  </view>
+</view>
+
+<style>
+ 
+</style>

@@ -1,0 +1,39 @@
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="全部订单">
+    <van-card wx:for="{{allorder}}" class="padding" thumb-link='../goodsdetail/goodsdetail?id={{item.goodsid}}' data-id="{{item.goodsid}}" price="{{item.money}}" desc="{{item.brief}}" tag="{{item.status}}" title="{{item.name}}" thumb="{{ item.images[0] }}">
+      <view slot="tags">
+        <view class="padding-sm flex flex-wrap">
+          <view wx:if="{{item.status!='已完成'}}" slot="footer">
+            <van-button size="mini" bind:tap="confirm" data-id="{{item._id}}">确认收货</van-button>
+          </view>
+
+        </view>
+      </view>
+    </van-card>
+  </van-tab>
+  <van-tab title="进行中">
+    <van-card wx:for="{{allorder}}" wx:if="{{item.status!='已完成'}}" class="padding" thumb-link='../goodsdetail/goodsdetail?id={{item.goodsid}}' data-id="{{item.goodsid}}" price="{{item.money}}" desc="{{item.brief}}" tag="{{item.status}}" title="{{item.name}}" thumb="{{ item.images[0] }}">
+      <view slot="tags">
+        <view class="padding-sm flex flex-wrap">
+          <view wx:if="{{item.status!='已完成'}}" slot="footer">
+            <van-button size="mini" bind:tap="confirm" data-id="{{item._id}}">确认收货</van-button>
+          </view>
+
+        </view>
+      </view>
+    </van-card>
+  </van-tab>
+
+  <van-tab title="已完成">
+    <van-card wx:for="{{allorder}}" wx:if="{{item.status=='已完成'}}" class="padding" thumb-link='../goodsdetail/goodsdetail?id={{item.goodsid}}' data-id="{{item.goodsid}}" price="{{item.money}}" desc="{{item.brief}}" tag="{{item.status}}" title="{{item.name}}" thumb="{{ item.images[0] }}">
+      <view slot="tags">
+        <view class="padding-sm flex flex-wrap">
+          <view wx:if="{{item.status!='已完成'}}" slot="footer">
+            <van-button size="mini" bind:tap="confirm" data-id="{{item._id}}">确认收货</van-button>
+          </view>
+
+        </view>
+      </view>
+    </van-card>
+  </van-tab>
+</van-tabs>

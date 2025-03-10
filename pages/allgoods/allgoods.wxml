@@ -1,0 +1,26 @@
+<view class="cu-bar bg-white search">
+    <view class="search-form radius">
+        <text class="cuIcon-search"></text>
+        <input bindinput="search_input"  type="text" placeholder="请输入关键字" confirm-type="search"></input>
+    </view>
+    <view class="action">
+        <view bindtap="tosearch">
+            搜索
+        </view>
+        <!-- <text class="cuIcon-triangledownfill"></text>
+       -->
+    </view>
+
+</view>
+<van-dropdown-menu>
+    <van-dropdown-item bindchange="option1change" value="{{ value1 }}" options="{{ type }}" />
+
+
+</van-dropdown-menu>
+<view wx:for="{{list}}" class="text-center" bindtap="todetail" data-value="{{item._id}}" wx:if="{{item.type==name}}">
+
+    <image class="radius-xl" style="width: 80%;height: 400rpx;" src="{{item.images[0]}}" mode="aspectFill" />
+    <view class="text-xl">
+        {{item.name}}
+    </view>
+</view>

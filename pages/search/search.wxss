@@ -1,0 +1,13 @@
+.search-results {
+  padding: 10rpx;
+}
+
+.no-result {
+  text-align: center;
+  padding: 40rpx;
+  color: #999;
+}
+
+.van-card {
+  margin-bottom: 10rpx;
+}

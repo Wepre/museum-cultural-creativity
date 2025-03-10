@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.left {
+  flex: 1;
+  height: 100%;
+}
+.scroll-view {
+  height: 100%;
+  padding: 10px;
+}
+.right {
+  width: 200px;
+  height: 100%;
+  background-color: #eee;
+  border-left: 1px solid #ddd;
+}

@@ -1,0 +1,38 @@
+
+<van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="博物馆">
+        <van-card wx:for="{{placelike}}" class="padding" bindtap="toplacedetail" data-id="{{item._id}}" price="{{item.money}}" desc="{{item.brief}}" title="{{item.name}}" thumb="{{ item.images[0] }}">
+            <view slot="tags">
+                <view class="padding-sm flex flex-wrap">
+                  
+
+                </view>
+            </view>
+        </van-card>
+    </van-tab>
+    <van-tab title="展览馆">
+        <van-card wx:for="{{displaylike}}" class="padding" bindtap="todisplay" data-id="{{item._id}}"  desc="{{item.brief}}" title="{{item.sname}}" thumb="{{ item.images[0] }}">
+            <view slot="tags" wx:if="{{item.isaccept}}">
+                <view class="padding-sm flex flex-wrap">
+                    <view class="padding-xs">
+                        <view class="cu-tag bg-cyan">{{test.trans(item)}}</view>
+                    </view>
+
+                </view>
+            </view>
+        </van-card>
+    </van-tab>
+    <van-tab title="文物">
+        <van-card wx:for="{{itemlike}}"  class="padding" bindtap="toitem" data-id="{{item._id}}" price="{{item.smoney}}" desc="{{item.brief}}"  title="{{item.name}}" thumb="{{ item.images[0] }}">
+            <view slot="tags" wx:if="{{item.isaccept}}">
+                <view class="padding-sm flex flex-wrap">
+                    <view class="padding-xs">
+                        <view class="cu-tag bg-cyan">{{test.trans(item)}}</view>
+                    </view>
+
+                </view>
+            </view>
+        </van-card>
+    </van-tab>
+  
+</van-tabs>

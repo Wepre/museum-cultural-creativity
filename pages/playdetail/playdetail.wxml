@@ -1,0 +1,129 @@
+<view class="bg-white ">
+  <view class="bg-img   " style="background-image: url(https://p5.itc.cn/images01/20210830/c60ecd7064034e8bb072b2ef23a91dad.jpeg);height: 260rpx;">
+  </view>
+</view>
+
+<view class="margin-xs">
+  <view class="bg-white radius margin-xs radius" style="min-height: 90vh;">
+
+    <view class="flex margin-lr-sm padding justify-start" style="margin-top: -100rpx;">
+      <image src="{{res.images[0]}}" style="height: 230rpx; width: 180rpx;" mode="" />
+
+      <view class="text-black margin-left-sm" style="width: 480rpx;">
+        <view class="text-right">
+          <view class="cu-avatar round "></view>
+        </view>
+        <view class="text-left margin-top-sm">
+          <text class="text-xl text-black text-bold">{{res.name}}</text>
+        </view>
+        <view class="text-left margin-top-xs">
+          <text class="text-black">免费</text>
+        </view>
+        <view class="text-left margin-top-xs">
+          <view class=" flex flex-direction">
+            <button wx:if="{{!islike}}" class="cu-btn bg-brown sm" bindtap="likeit">收藏</button>
+            <button wx:else class="cu-btn bg-brown sm" bindtap="canclelike">取消收藏</button>
+
+          </view>
+        </view>
+      </view>
+    </view>
+    <van-cell title="{{res.time}}开幕" icon="clock" value="" size="small" label="" />
+    <van-cell title="{{res.address}}" value="" icon="location-o" size="small" label="可驾车行驶" />
+    <view class="padding-top margin-tb-xs margin-left text-black text-bold text-lg">
+      简介
+    </view>
+    <view class="margin padding-bottom" style="line-height: 48rpx;">
+      {{res.brief}}
+    </view>
+
+    <view class="margin-tb-sm margin-left text-black text-bold text-lg">
+      留言
+    </view>
+    <view class="bg-white">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url(https://image.meiye.art/FlqKg5bugFQD5Qzm_QhGM7ET4Mtx?imageMogr2/thumbnail/450x/interlace/1);"></view>
+          <view class="content">
+            <view class="text-lg text-bold">
+              谦和钢笔
+            </view>
+            <view class="text-gray text-sm">
+              05-08
+            </view>
+          </view>
+          <view class="action text-xxl text-black">
+            <view class="cuIcon-appreciate"><text class="text-gray text-lg"> 37</text></view>
+          </view>
+          <view class="action text-xxl text-black">
+            <view class="cuIcon-comment"></view>
+          </view>
+        </view>
+        <view class="margin-left-sm padding-left text-black">
+          <view class="margin-lr-sm padding-left">
+            <text>非常棒的展览，收获非常大，不要错过，一定不要错过。</text>
+          </view>
+
+        </view>
+      </view>
+
+      <view class="cu-list menu-avatar no-padding">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url(https://image.meiye.art/FhHGe9NyO0uddb6D4203jevC_gzc?imageMogr2/thumbnail/450x/interlace/1);"></view>
+          <view class="content">
+            <view class="text-lg text-bold">
+              你不知道的事
+            </view>
+            <view class="text-gray text-sm">
+              05-08
+            </view>
+          </view>
+          <view class="action text-xxl text-black">
+            <view class="cuIcon-appreciate"><text class="text-gray text-lg"> 18</text></view>
+          </view>
+          <view class="action text-xxl text-black">
+            <view class="cuIcon-comment"></view>
+          </view>
+        </view>
+        <view class="margin-left-sm padding-left text-black">
+          <view class="margin-lr-sm padding-left">
+            <text>普及了很多知识盲区，大家可以去</text>
+          </view>
+
+        </view>
+      </view>
+
+      <view class="cu-list menu-avatar no-padding padding-bottom">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url(https://image.meiye.art/FgaFNs-YNxw_vRtqCbvQru3z6s3P?imageMogr2/thumbnail/450x/interlace/1);"></view>
+          <view class="content">
+            <view class="text-lg text-bold">
+              性感的大象
+            </view>
+            <view class="text-gray text-sm">
+              05-08
+            </view>
+          </view>
+          <view class="action text-xxl text-black">
+            <view class="cuIcon-appreciate"><text class="text-gray text-lg"> 12</text></view>
+          </view>
+          <view class="action text-xxl text-black">
+            <view class="cuIcon-comment"></view>
+          </view>
+        </view>
+        <view class="margin-left-sm padding-left text-black">
+          <view class="margin-lr-sm padding-left">
+            <text>国产之光。外观设计无可挑剔,全系列车型国产车里面显得高端大气上档次。MG6和550开始及以上的车型底盘和用料值得称赞。</text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+<view style="height: 120rpx;">
+
+</view>
+<view class="padding flex flex-direction" style="position: fixed; width: 100%; bottom: 0px">
+  <button class="cu-btn bg-blue margin-tb-sm lg " style="width: 100%;" bindtap="tobookplace">免费预约</button>
+</view>

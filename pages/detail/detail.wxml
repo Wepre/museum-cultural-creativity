@@ -1,0 +1,39 @@
+<view>
+    <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+        <swiper-item wx:for="{{image}}" wx:key>
+            <image bindtap="viewimg" data-url="{{item}}" src="{{item}}" mode="aspectFill"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="cu-list menu">
+    <view class="cu-item arrow">
+        <view class="content">
+            <text class="cuIcon-warn text-green"></text>
+            <text class="text-grey">位置</text>
+        </view>
+        <view class="action">
+            <text class="text-grey text-sm">{{loc}}</text>
+        </view>
+    </view>
+</view>
+<view class="img">
+
+    <view class="cotent">
+        <view class="title">备注</view>
+        <view class="bookwords">
+            <label class="jianjie">{{content}}</label>
+        </view>
+    </view>
+    <view class="cotent">
+        <view class="title">用户名</view>
+        <view class="bookwords">
+            <label class="jianjie">{{username}}</label>
+        </view>
+    </view>
+</view>
+<view wx:if="{{get}}" class="cu-bar tabbar btn-group" >
+    <button class="cu-btn  bg-grey shadow-blur round lg">已领养</button>
+</view>
+<view wx:else class="cu-bar tabbar btn-group" >
+    <button class="cu-btn  bg-green shadow-blur round lg" bindtap="getit">领养</button>
+</view>

@@ -1,0 +1,143 @@
+<view class="cu-timeline margin-xs radius-lg">
+
+  <view class="padding-sm text-center">
+    <text class="text-xxl text-bold text-black">{{content.title}}</text>
+  </view>
+
+  <view class="flex justify-between margin-top-xs">
+  </view>
+  <view class="text-xl">
+    <rich-text nodes="{{content.content}}" />
+  </view>
+  <!-- <view class="padding-left-sm flex align-center">
+    <button class="cu-btn round">评测</button>
+    <button class="cu-btn round margin-left-sm">原创视频</button>
+    <button class="cu-btn round margin-left-sm">新车上市</button>
+  </view> -->
+<view style="height: 200rpx;">
+    
+</view>
+
+
+  <!-- <view class="bg-white">
+    <view class="cu-bar">
+      <view class="text-black text-xxl padding-lr-sm">
+        全部评论
+      </view>
+    </view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(https://image.meiye.art/FlqKg5bugFQD5Qzm_QhGM7ET4Mtx?imageMogr2/thumbnail/450x/interlace/1);"></view>
+        <view class="content">
+          <view class="text-lg text-bold">
+            谦和钢笔
+          </view>
+          <view class="text-gray text-sm">
+            05-08
+          </view>
+        </view>
+        <view class="action text-xxl text-black">
+          <view class="cuIcon-appreciate"><text class="text-gray text-lg"> 37</text></view>
+        </view>
+        <view class="action text-xxl text-black">
+          <view class="cuIcon-comment"></view>
+        </view>
+      </view>
+      <view class="margin-left-sm padding-left text-black">
+        <view class="margin-lr-sm padding-left">
+          <text>评论一</text>
+        </view>
+        <view class="margin-left-lg margin-right padding-lr bg-gray radius-lg">
+          <view class="margin-tb-xs padding-top-sm bg-gray">
+            <text class="text-blue">一抹♡柔情：</text>
+            <text class="text-black">看看领克吧，全能满足你，内饰相当精致</text>
+          </view>
+          <view class="margin-tb-xs padding-top-xs bg-gray">
+            <text class="text-blue">Distortion 624：</text>
+            <text class="text-black">这些可以加的东西不配就不配，国产车是配一大堆可以后期加的配置，安全气囊却能少就少</text>
+          </view>
+          <view class="margin-tb-xs padding-top-xs padding-bottom-sm bg-gray">
+            <text class="text-blue">共3条回复></text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="cu-list menu-avatar no-padding">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(https://image.meiye.art/FhHGe9NyO0uddb6D4203jevC_gzc?imageMogr2/thumbnail/450x/interlace/1);"></view>
+        <view class="content">
+          <view class="text-lg text-bold">
+            飞奔移动电源
+          </view>
+          <view class="text-gray text-sm">
+            05-08
+          </view>
+        </view>
+        <view class="action text-xxl text-black">
+          <view class="cuIcon-appreciate"><text class="text-gray text-lg"> 18</text></view>
+        </view>
+        <view class="action text-xxl text-black">
+          <view class="cuIcon-comment"></view>
+        </view>
+      </view>
+      <view class="margin-left-sm padding-left text-black">
+        <view class="margin-lr-sm padding-left">
+          <text>内饰设计不太养眼，但是实际我坐过一次，感觉还可以，没有想象的那么差，可能广汽做工不错的原因。</text>
+        </view>
+        <view class="margin-left-lg margin-right padding-lr bg-gray radius-lg">
+          <view class="margin-tb-xs padding-tb-sm bg-gray">
+            <text class="text-blue">yiche朱涛</text>
+            <view class="cu-tag bg-blue light round sm">作者</view>
+            <text class="text-blue">：</text>
+            <text class="text-black">设计非常传统，但丰田理念就这样，耐用为主，不会很激进。</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="cu-list menu-avatar no-padding padding-bottom">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(https://image.meiye.art/FgaFNs-YNxw_vRtqCbvQru3z6s3P?imageMogr2/thumbnail/450x/interlace/1);"></view>
+        <view class="content">
+          <view class="text-lg text-bold">
+            性感的大象
+          </view>
+          <view class="text-gray text-sm">
+            05-08
+          </view>
+        </view>
+        <view class="action text-xxl text-black">
+          <view class="cuIcon-appreciate"><text class="text-gray text-lg"> 12</text></view>
+        </view>
+        <view class="action text-xxl text-black">
+          <view class="cuIcon-comment"></view>
+        </view>
+      </view>
+      <view class="margin-left-sm padding-left text-black">
+        <view class="margin-lr-sm padding-left">
+          <text>国产之光。外观设计无可挑剔,全系列车型国产车里面显得高端大气上档次。MG6和550开始及以上的车型底盘和用料值得称赞。</text>
+        </view>
+      </view>
+    </view>
+
+  </view> -->
+
+</view>
+
+<!-- 底部评论 -->
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text class="cuIcon-write text-gray"></text>
+  </view>
+
+  <input class="solid-bottom" placeholder="写评论" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+
+  <view class="action">
+    <text class="cuIcon-comment text-black"></text>
+    <text class="cuIcon-appreciate text-black"></text>
+    <text class="cuIcon-favor text-black"></text>
+    <text class="cuIcon-forward text-black"></text>
+  </view>
+
+</view>

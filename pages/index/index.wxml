@@ -1,0 +1,64 @@
+<view class="bg-white radius-lg">
+    <view class="bg-img   radius-lg" style="background-image: url(https://wlt.xinjiang.gov.cn/wlt/xjlw/202102/ccc91a0f6d794b4dbf2b7bb8e290b1e8/images/微信图片_20210224164047.jpg);height: 560rpx;">
+        <view class="box-serach padding-top-m">
+            <view class="cu-bar search radius-lg">
+                <view class="search-form round">
+                    <text class="cuIcon-search"></text>
+                    <input bindinput="search_input" type="text" placeholder="搜博物馆" confirm-type="search"  bindconfirm="tosearch"></input>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 中间的盒子 -->
+<view class="padding-xl radius-lg " style="position: absolute; left: 0rpx; top: 460rpx; height: 200rpx; width: 100%; display: flex; box-sizing: border-box">
+    <van-grid style="width:100%">
+        <van-grid-item icon="shop-o" bindtap="todetailicon" data-value="博物馆" text="博物馆" />
+        <van-grid-item icon="star-o" bindtap="todetailicon" data-value="搜文物" text="搜文物" />
+        <van-grid-item icon="more-o" bindtap="todetailicon" data-value="看展览" color='yellow' text="看展览" />
+        <van-grid-item icon="cart-o" bindtap="todetailicon" data-value="淘文创" text="淘文创" />
+    </van-grid>
+
+
+</view>
+<view style="margin-top: 200rpx;">
+
+</view>
+<view class="cu-list menu">
+
+    <view class="cu-item">
+        <view class="content">
+            <text class="cuIcon-discover text-orange "></text>
+            <text class="text-black text-bold">博物馆推荐</text>
+        </view>
+        <view class="action" bindtap="toallplace">
+            <text class="text-grey text-sm">全部 ></text>
+        </view>
+    </view>
+</view>
+<!-- <view style="white-space: nowrap;">
+    <view bindtap="todetail" data-index="{{item._id}}" class="padding-right padding-left`" wx:for="{{placeList}}" wx:key="index" style="display: inline-block; margin-right: 10px;">
+        <image src="{{item.images[0]}}" mode="heightFix" style="height: 200rpx; position: relative;">
+            <text style="position: absolute; bottom: 5px; left: 5px; color: white; font-size: 12px;">123{{item.name}}</text>
+        </image>
+    </view>
+</view> -->
+<view class="grid col-2 margin-bottom padding ">
+    <view  wx:for="{{placeList}}" bindtap="todetail" data-index="{{item._id}}"  class="cu-card case padding-right-xs">
+        <view class="cu-item shadow">
+            <view class="image" bindtap="todetail" data-index="{{item._id}}">
+                <image src="{{item.images[0]}}" style="height: 200rpx;"></image>
+            </view>
+            <view class="">
+                <view class="cu-item">
+                    <view class="content margin-left flex-sub">
+                        <view class="text-black text-bold">{{item.name}}</view>
+                        
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+</view>

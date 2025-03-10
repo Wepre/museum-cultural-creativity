@@ -1,0 +1,27 @@
+<view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <text class="cuIcon-titles text-orange"></text> 点击图片可以跳转
+  </view>
+</view>
+<view wx:for="{{list}}">
+  <view class="cu-card article {{isCard?'no-card':''}}">
+    <view class="cu-item shadow">
+      <view class="title">
+        <view class="text-cut">{{item.name}}</view>
+      </view>
+      <view class="content">
+        <image src="{{item.images[0]}}" bindtap='onItemClick' data-index="{{item}}" mode="aspectFill"></image>
+        <view class="desc">
+          <view class="text">预约时间：{{item.date}}--{{item.time}}</view>
+          <view class="text">预约人数：{{item.num}}人</view>
+          
+          <view class="padding-xs">
+            <view class="cu-tag bg-red" data-id="{{item._id}}" bindtap="cancle">点击取消</view>
+          </view>
+
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

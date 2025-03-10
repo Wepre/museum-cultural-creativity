@@ -1,0 +1,28 @@
+<view class="geren">
+  <view class="touxiang">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="nicheng">
+    <open-data type="userNickName" lang="zh_CN"></open-data>
+  </view>
+</view>
+<view class="info">
+  <!-- 中间的盒子 -->
+  <view class="action">
+    <text class="cuIcon-titles text-blue"></text>订单中心
+  </view>
+  <van-grid bindtap="toorderdetail" style="width:100%">
+    <van-grid-item icon="coupon-o" text="未付款" />
+    <van-grid-item icon="send-gift-o" text="已付款" />
+    <van-grid-item  icon="records" color='yellow' text="待收货" />
+    <van-grid-item icon="description" text="我的订单" />
+  </van-grid>
+</view>
+<view class="cells">
+  <van-cell-group inset border>
+    <van-cell title="我的预约" bindtap="mybook" icon="clock" is-link border />
+    <van-cell title="我的收藏" bindtap="mylike" icon="add" is-link border />
+    <van-cell title="账号设置" bindtap="advice" icon="setting" is-link border />
+    <van-cell title="退出登录" bindtap="exit" icon="exit" is-link border />
+  </van-cell-group>
+</view>

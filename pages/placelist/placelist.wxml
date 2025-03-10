@@ -1,0 +1,27 @@
+
+<view class="cu-bar bg-white search">
+  <view class="search-form radius">
+    <text class="cuIcon-search"></text>
+    <input  bindinput="search_input" type="text" placeholder="请输入关键字" confirm-type="search"></input>
+  </view>
+  <view class="action">
+    <view bindtap="tosearch">
+      搜索
+    </view>   
+  </view>
+
+</view>
+<van-dropdown-menu>
+  <van-dropdown-item bindchange="option1change" value="{{ value1 }}" options="{{ pos }}" />
+ 
+
+</van-dropdown-menu>
+
+<van-card 
+wx:for="{{list}}"
+  wx:if="{{item.province==name}}"
+  desc="{{item.address}}"
+  title="{{item.name}}"
+  thumb="{{item.images[0]}}"
+  thumb-link="../placedetail/placedetail?id={{item._id}}"
+/>

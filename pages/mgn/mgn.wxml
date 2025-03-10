@@ -1,0 +1,23 @@
+<view wx:for="{{list}}" wx:key="articleList" bindtap='onItemClick' data-index="{{item}}">
+    <view class="cu-card article {{isCard?'no-card':''}}">
+        <view class="cu-item shadow">
+            <view class="title">
+                <view class="text-cut">{{item.content}}</view>
+            </view>
+            <view class="content">
+                <image src="{{item.image[0]}}" mode="aspectFill"></image>
+                <view class="desc">
+                    <view class="text-content">{{item.content}}</view>
+                    <view wx:if="{{item.get}}">
+                        <view class="cu-tag bg-red light sm round">已被领养</view>
+                        {{item.time}}
+                    </view>
+                    <view wx:else>
+                        <view class="cu-tag bg-red light sm round">待领养</view>
+                        {{item.time}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

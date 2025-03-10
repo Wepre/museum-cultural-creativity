@@ -1,0 +1,33 @@
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{res.images}}" wx:key="item">
+    <image src="{{item}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+<view class="cu-list menu">
+  <view class="cu-item">
+
+    <view class="content">
+      <text class="text-red text-xl">¥ {{res.price}}</text>
+      <text class="text-black text-sm"></text>
+    </view>
+  </view>
+
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-black text-bold">{{res.name}}</text>
+    </view>
+    
+  </view>
+  <view class="padding-top margin-tb-xs margin-left text-black text-bold text-lg">
+      简介
+    </view>
+    <view class="margin padding-bottom" style="line-height: 48rpx;">
+      {{res.brief}}
+    </view>
+</view>
+
+<van-goods-action>
+  
+  
+  <van-goods-action-button text="立即购买" bind:click="topay" />
+</van-goods-action>

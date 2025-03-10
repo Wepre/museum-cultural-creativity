@@ -1,0 +1,37 @@
+<view hidden="{{bookcar.length!=0}}">
+  <van-empty description="当前没有任何书在书架" hidden="{{bookcar.length!=0}}" />
+</view>
+<van-checkbox-group value="{{ result }}" bind:change="onChange" hidden="{{bookcar.length==0}}">
+  <block wx:for="{{goods}}" wx:key="index">
+    <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录 -->
+    <van-checkbox name="{{index}}">
+      <view class="view_tupian_wenzi">
+        <image class="image_1" src="{{item.images[0]}}" bindtap="click" data-value="{{item}}" />
+        <!-- 包裹两行文字 -->
+        <view class="view_wenzi2" bindtap="click" data-value="{{item}}">
+          <text>{{item.name}}</text>
+          <text class="text_small">￥{{item.price}}</text>
+        </view>
+        <button class="cancel" bindtap="onDel" size="mini" data-value="{{item}}">删除</button>
+      </view>
+    </van-checkbox>
+  </block>
+</van-checkbox-group>
+<van-checkbox-group value="{{ result }}" bind:change="onChange" hidden="{{bookcar.length==0}}">
+  <block wx:for="{{goods}}" wx:key="index">
+    <van-checkbox name="{{index}}">
+      <van-card  num="2" price="2.00" desc="描述信息" title="{{item.name}}" thumb="{{ item.images[0] }}" />
+
+    </van-checkbox>
+  </block>
+</van-checkbox-group>
+
+
+
+<!-- <view bindtap='adddetial'>
+  <image class="add_icon" src="/images/car-c.png"></image>
+</view> -->
+<van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onClickButton" tip="{{ true }}">
+  <van-checkbox value="{{ checked }}" bind:change="onChange1">全选</van-checkbox>
+
+</van-submit-bar>

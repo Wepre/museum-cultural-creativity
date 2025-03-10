@@ -1,0 +1,9 @@
+
+<van-card 
+wx:for="{{list}}"
+  wx:if="{{item.province==name}}"
+  desc="{{item.address}}"
+  title="{{item.name}}"
+  thumb="{{item.images[0]}}"
+  thumb-link="../placedetail/placedetail?id={{item._id}}"
+/>

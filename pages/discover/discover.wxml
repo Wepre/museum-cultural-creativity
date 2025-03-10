@@ -1,0 +1,47 @@
+<view class="cu-timeline margin-xs radius-lg" style="min-height: 92vh;">
+
+  <!-- 滚动图片 -->
+  <swiper class="screen-swiper margin-sm round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item wx:for="{{swiperList}}" wx:key="item">
+      <view class="bg-img radius" style="background-image: url({{item.url}});height: 310rpx;">
+        <view class="padding-xl text-white">
+          <view class="padding-xs text-xl">
+            {{item.title}}
+          </view>
+          <view class="padding-xs">
+            {{item.des}}
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="cu-list menu">
+
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-discover text-orange "></text>
+        <text class="text-black text-bold">要闻</text>
+      </view>
+      <view class="action" bindtap="toallplace">
+        <text class="text-grey text-sm">全部 ></text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-card article no-card margin-top solid-bottom" bindtap="tonewdetail" data-index="{{item._id}}" wx:for="{{newsList}}" wx:key="item">
+    <view class="cu-item shadow">
+      <view class="content">
+        <view class="desc">
+          <view class="text-black text-bold text-lg">{{item.title}}</view>
+          <view class="flex justify-between">
+            <view class="text-gray text-sm">{{item.from}} · {{item.time}}</view>
+            <view class="text-gray text-sm padding-right">{{item.collection}} 收藏</view>
+          </view>
+        </view> 
+        <view>
+          <image src="{{item.image}}" mode="aspectFill" class="radius" style="height: 150rpx;width: 190rpx;"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,12 @@
+<van-dropdown-menu>
+    <van-dropdown-item bindchange="option1change" value="{{ value1 }}" options="{{ type }}" />
+
+
+</van-dropdown-menu>
+<view wx:for="{{list}}" class="text-center" bindtap="todetail" data-value="{{item._id}}" wx:if="{{item.type==name||name=='推荐'}}">
+
+    <image class="radius-xl" style="width: 80%;height: 400rpx;" src="{{item.images[0]}}" mode="aspectFill" />
+    <view class="text-xl">
+        {{item.name}}
+    </view>
+</view>
